@@ -1,5 +1,5 @@
 <?php
-@include_once 'server.php'
+@include_once 'server.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,14 @@
 </head>
 <body>
 <div id="upload">
+    <?php if(isset($uploaded)) :?>
 
+    <?php foreach ($uploaded as $upload) : ?>
+
+        <div><a href="Files/<?=$upload;?>"><?=$upload?></a></div>
+
+    <?php endforeach?>
+    <?php endif?>
 </div>    
 <div id="uploadProgress" class="form-control">
     

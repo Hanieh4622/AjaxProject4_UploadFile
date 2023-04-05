@@ -1,3 +1,7 @@
+<?php
+@include_once 'server.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +20,7 @@
 </div>    
 <form class="form-group" action="" method="post" enctype="multipart/form-data">
     <input type="file" id="file" class="form-control" name="File[]" multiple>
+    <input type="submit" value="Upload..." class="btn btn-success" id="submit">
 
 </form>
 

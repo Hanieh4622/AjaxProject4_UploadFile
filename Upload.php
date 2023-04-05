@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajax Example 4</title>
-    <link rel="stylesheet" href="bootstrap.rtl.css">
+    <link rel="stylesheet" href="bootstrap.rtl.css"><script src="jquery-3.6.4.min.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="upload">
@@ -24,7 +24,8 @@
 
 </form>
 
+
+
 <script src="script.js" type="text/javascript"></script>
-<script src="jquery-3.6.4.min.js" type="text/javascript"></script>
 </body>
 </html>  

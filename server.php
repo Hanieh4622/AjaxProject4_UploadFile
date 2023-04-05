@@ -8,5 +8,9 @@ foreach ($_FILES['File']['name'] as $key=>$name ) {
 
     }
 }
+if(isset($_POST['ajax']) And $_POST['ajax']){
+    echo json_encode($uploaded);
+    die();
+}
 
 }

@@ -1,6 +1,8 @@
 $("#submit").click(function (e) { 
+
     e.preventDefault();
     var data=new FormData();
+    data.append('ajax',true);
 
     var inp = document.getElementById('file');
 
@@ -13,13 +15,14 @@ $("#submit").click(function (e) {
     request.upload.addEventListener('progress',function(event){
         if (event.lengthComputable)
         {
-            var percent=event.loaded/event.total;
+            var percent=event.loaded / event.total;
+            $('#uploadProgress').html(Math.round(percent*100) +'%');
         }
-        $("#uploadProgress").html(percent*100 +'%');
+        
 
     })
     request.upload.addEventListener('load',function(event){
-        $("#uploadProgress").fadeOut();
+        $('#uploadProgress').fadeOut();
         $('#uploadProgress').empty();
     })
 
@@ -28,6 +31,7 @@ $("#submit").click(function (e) {
     })
 
     request.open('POST','server.php');
-    request.setRequestHeader('Cache_Control','no_cache');
+    request.setRequestHeader('Cache-Control','no-cache');
+    $('#uploadProgress').fadeIn();
     request.send(data);
 });

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="bootstrap.rtl.css"><script src="jquery-3.6.4.min.js" type="text/javascript"></script>
 </head>
 <body>
+    <h1>this is Header</h1>
 <div id="upload">
     <?php if(isset($uploaded)) :?>
 
